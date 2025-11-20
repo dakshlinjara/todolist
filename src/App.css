@@ -1,13 +1,19 @@
 .app-shell {
   width: min(100%, 520px);
   margin: 0 auto;
+  min-height: 100vh;
   min-height: 100svh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   padding: 1.75rem 1.25rem 3rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   color: var(--ink);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .focus-card {
@@ -390,13 +396,19 @@
 }
 
 .login-shell {
+  min-height: 100vh;
   min-height: 100svh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(2rem, 4vw, 4rem);
   background: radial-gradient(circle at top, rgba(162, 123, 92, 0.2), transparent 40%),
     linear-gradient(160deg, #2c3639 0%, #3f4e4f 100%);
+  overflow: hidden;
 }
 
 .login-panel {
