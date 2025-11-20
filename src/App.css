@@ -1,7 +1,7 @@
 .app-shell {
   width: min(100%, 520px);
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 1.75rem 1.25rem 3rem;
   display: flex;
   justify-content: center;
@@ -390,7 +390,7 @@
 }
 
 .login-shell {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
