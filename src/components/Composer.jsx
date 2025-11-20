@@ -6,6 +6,12 @@ function Composer({ value, onChange, onAdd }) {
         onChange={onChange}
         type="text"
         placeholder="Add a reminder..."
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            onAdd();
+          }
+        }}
       />
       <button onClick={onAdd} type="button">
         Add

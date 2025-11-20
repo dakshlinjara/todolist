@@ -1,24 +1,23 @@
 .app-shell {
-  width: min(900px, 100% - 48px);
+  width: min(100%, 520px);
   margin: 0 auto;
-  height: 100vh;
-  padding: clamp(2rem, 5vw, 4rem) 0;
+  min-height: 100vh;
+  padding: 1.75rem 1.25rem 3rem;
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   color: var(--ink);
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .focus-card {
   background: linear-gradient(135deg, var(--deep), var(--mid));
-  border-radius: 32px;
-  padding: clamp(2rem, 4vw, 3.25rem);
+  border-radius: 24px;
+  padding: 1.75rem;
   color: #f4f1e8;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.25rem;
   box-shadow: 0 40px 80px rgba(15, 23, 42, 0.35);
   width: 100%;
 }
@@ -42,19 +41,19 @@
 .stat-grid {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .stat-card {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.1rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   background: rgba(255, 255, 255, 0.05);
   flex: 1;
-  min-width: 180px;
+  min-width: 0;
 }
 
 .stat-card span {
@@ -75,14 +74,14 @@
 
 .todo-panel {
   background: var(--card);
-  border-radius: 28px;
-  padding: clamp(1.5rem, 4vw, 3rem);
-  box-shadow: 0 30px 80px rgba(32, 13, 3, 0.18);
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 30px 50px rgba(32, 13, 3, 0.18);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   color: var(--ink);
-  overflow: hidden;
+  margin-top: 1.5rem;
 }
 
 .todo-panel.embedded {
@@ -167,14 +166,9 @@
 }
 
 .list-stack {
-  flex: 1;
-  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-right: 0.35rem;
-  max-height: 420px;
-  overflow-y: auto;
 }
 
 .list-stack::-webkit-scrollbar {
@@ -466,16 +460,20 @@
 
 .login-toggle {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .login-toggle p {
   margin: 0;
   font-size: 0.9rem;
   color: var(--muted);
+}
+
+.login-toggle .ghost-button {
+  width: 100%;
 }
 
 @media (max-width: 720px) {
@@ -547,5 +545,35 @@
   .action-buttons button {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (min-width: 960px) {
+  .app-shell {
+    width: min(1100px, 100% - 72px);
+    padding: clamp(2rem, 5vw, 4rem) 0;
+    height: 100vh;
+    align-items: stretch;
+  }
+
+  .focus-card {
+    border-radius: 32px;
+    padding: clamp(2rem, 4vw, 3.25rem);
+    gap: 1.75rem;
+  }
+
+  .todo-panel {
+    border-radius: 28px;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 0;
+    overflow: hidden;
+  }
+
+  .list-stack {
+    flex: 1;
+    min-height: 0;
+    padding-right: 0.35rem;
+    max-height: 420px;
+    overflow-y: auto;
   }
 }
